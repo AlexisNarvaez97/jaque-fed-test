@@ -4,10 +4,10 @@
         <input type="text" placeholder="Búsqueda" name="search" [(ngModel)]="search" class="table__box-search__input">
     </div>
     <div class="table__order">
-        <select name="select" class="table__order-select">
-            <option value="value1" selected disabled>Ordenar de A - Z</option> 
-            <option value="value2">A-Z</option>
-            <option value="value3">Z-A</option>
+        <select name="select" class="table__order-select" name="order" (change)="orderUsers()" [(ngModel)]="order">
+            <option value="" selected disabled>Ordenar de A - Z</option> 
+            <option value="az">A-Z</option>
+            <option value="za">Z-A</option>
           </select>
     </div>
     <div class="table__status">
@@ -22,9 +22,9 @@
         <option value="desactivados">Desactivados</option>
       </select>
       <div class="table__icons">
-        <img class="table__icons-list" src="assets/list.svg" alt="">
-        <img src="assets/square.svg" alt="">
+        <img class="table__icons-list" src="assets/list.svg" alt="List">
+        <img src="assets/square.svg" alt="Square">
       </div>
     </div>
 </div>
-<app-list-users [search]="search" [filterUsers]="statusUser"></app-list-users>
+<app-list-users [search]="search" [filterUsers]="statusUser" [orderUsers]="orderAsc"></app-list-users>

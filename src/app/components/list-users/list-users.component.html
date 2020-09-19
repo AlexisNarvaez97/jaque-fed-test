@@ -12,7 +12,7 @@
   </div>
   <div class="box-list-user">
     <div
-      *ngFor="let user of users | search: search | statusFilter: filterUsers"
+      *ngFor="let user of users | search: search | statusFilter: filterUsers | orderUser: orderUsers"
     >
       <div class="user-list__data">
         <div class="fas fa-grip-vertical"></div>
@@ -42,8 +42,9 @@
           <div *ngIf="user.active" class="fas fa-toggle-on"></div>
           <div *ngIf="!user.active" class="fas fa-toggle-off"></div>
         </div>
+        <app-modal-edit *ngIf="showModal" (closeModal)="modalClosed($event)" (sendUser)="getUser($event)"></app-modal-edit>
         <div class="user-list__data-actions">
-          <div class="fas fa-edit"></div>
+          <div class="fas fa-edit" (click)="sendUserModal(user)"></div>
           <div class="fas fa-trash"></div>
         </div>
       </div>

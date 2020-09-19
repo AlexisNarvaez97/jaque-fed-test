@@ -1,5 +1,5 @@
 import { UserService } from './../../services/user.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 
 @Component({
@@ -11,6 +11,11 @@ export class ListUsersComponent implements OnInit {
 
   @Input() search;
   @Input() filterUsers;
+  @Input() orderUsers;
+
+  @Output() userActual = new EventEmitter<boolean>();
+
+  showModal = false;
 
   userData = [];
   rolesData = [];
@@ -41,5 +46,17 @@ export class ListUsersComponent implements OnInit {
       default:
         return 'No rol'
     }
+  }
+
+  sendUserModal(user: any) { 
+    this.showModal = true;
+  }
+
+  sendUser() {
+    this.userActual.emit(true);
+  }
+
+  modalClosed(e) {
+    this.showModal = !e;
   }
 }

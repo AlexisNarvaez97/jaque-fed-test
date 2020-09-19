@@ -1,0 +1,61 @@
+<div class="container-modal">
+    <div class="box-modal">
+      <p class="box-modal__title">Agregar nuevo usuario</p>
+      <p class="box-modal__subtitle">Foto de perfil</p>
+      <div class="user__photo">
+        <div class="user__photo__box-icon"></div>
+        <i class="far fa-user user__photo__icon"></i>
+        <div class="user__photo-box">
+          <p class="user__photo-box__information">
+            JPG, PNG | Tamaño mínimo de 300px × 300px
+          </p>
+          <button class="user__photo-box__button">Subir foto</button>
+        </div>
+      </div>
+      <div class="box-modal__form">
+        <div class="box-modal__form__names-info">
+          <input type="text" placeholder="Nombre" class="input-custom" />
+          <input
+            type="text"
+            placeholder="Apellido Paterno"
+            class="input-custom"
+          />
+        </div>
+        <div class="box-modal__form__contact-info">
+          <input
+            type="text"
+            placeholder="Apellido materno"
+            class="input-custom"
+          />
+          <input
+            type="text"
+            placeholder="Correo electrónico"
+            class="input-custom"
+          />
+        </div>
+        <div class="box-modal__form__rol-info">
+          <select name="rol" class="input-custom">
+            <option value="" disabled selected>Rol</option>
+            <option value="Dueño">Dueño</option>
+            <option value="Administrador">Administrador</option>
+            <option value="Staff">Staff</option>
+          </select>
+          <div class="toggle-custom">
+              <label class="toggle-custom-inactive">Inactivo</label>
+              <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+                <label class="toggle-custom-active">Activo</label>
+          </div>
+        </div>
+      </div>
+      <div class="box-modal__buttons-actions">
+        <button class="box-modal__buttons-actions-close" (click)="modalClose()">
+          Cancelar
+        </button>
+        <button class="box-modal__buttons-actions-save">Guardar Usuario</button>
+      </div>
+    </div>
+  </div>
+  

@@ -64,8 +64,10 @@
       width: 10%;
       &-img {
         width: 4rem;
+        object-fit: cover;
+        object-position: center;
         height: 4rem;
-        border-radius: 15rem;
+        border-radius: 10rem;
         margin-top: 1rem;
       }
     }

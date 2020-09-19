@@ -1,3 +1,5 @@
+import { OrderUserPipe } from './../pipes/order-user.pipe';
+
 import { StatusFilterPipe } from './../pipes/status-filter.pipe';
 import { SearchPipe } from './../pipes/search.pipe';
 import { NgModule } from '@angular/core';
@@ -11,6 +13,7 @@ import { ModalComponent } from './modal/modal.component';
 import { TableUsersComponent } from './table-users/table-users.component';
 import { ListUsersComponent } from './list-users/list-users.component';
 import { FormsModule } from '@angular/forms';
+import { ModalEditComponent } from './modal-edit/modal-edit.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,9 @@ import { FormsModule } from '@angular/forms';
     TableUsersComponent,
     ListUsersComponent,
     SearchPipe,
-    StatusFilterPipe
+    StatusFilterPipe,
+    ModalEditComponent,
+    OrderUserPipe
   ],
   imports: [
     CommonModule,
@@ -33,7 +38,9 @@ import { FormsModule } from '@angular/forms';
     UserSectionComponent,
     ModalComponent,
     TableUsersComponent,
-    ListUsersComponent
+    ListUsersComponent,
+    ModalEditComponent,
+    OrderUserPipe
   ]
 })
 export class ComponentsModule { }

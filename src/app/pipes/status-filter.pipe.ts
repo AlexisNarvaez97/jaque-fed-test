@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class StatusFilterPipe implements PipeTransform {
 
-  transform([...users]: any, active: boolean = null): unknown {
+  transform(users: any, active: boolean = null): unknown {
     return active === null
       ? users
       : users.filter((user) => user.active === active);
