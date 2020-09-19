@@ -10,90 +10,33 @@
       <div class="user-list__head-status">Status</div>
       <div class="user-list__head-actions"></div>
     </div>
-    <div>
+    <div class="box-list-user">
       <div
+      *ngFor="let user of users | search:search"
       >
         <div class="user-list__data">
           <div class="fas fa-grip-vertical"></div>
           <div class="user-list__data__box__photo">
-            <img alt="photo" class="user-list__data__box__photo-img" />
+            <img src="{{ user.picture }}" alt="photo" class="user-list__data__box__photo-img" />
           </div>
           <div class="user-list__data-name">
-            Alexis
+            {{ user.name }}
           </div>
           <div class="user-list__data-lastnameP">
-            Narvaez
+            {{ user.mothersLastName }}
           </div>
           <div class="user-list__data-lastnameM">
-            Tadeo
+            {{ user.fathersLastName }}
           </div>
           <div class="user-list__data-email">
-            alexis@email.com
+            {{ user.email }}
           </div>
           <div class="user-list__data-rol">
-            Admin
+            {{ rolWork(user.roleId) }}
           </div>
           <div class="user-list__data-active">
-            <div class="fas fa-toggle-on"></div>
-            <div class="fas fa-toggle-off"></div>
-          </div>
-          <div class="user-list__data-actions">
-            <div class="fas fa-edit"></div>
-            <div class="fas fa-trash"></div>
-          </div>
-        </div>
-        <div class="user-list__data">
-          <div class="fas fa-grip-vertical"></div>
-          <div class="user-list__data__box__photo">
-            <img alt="photo" class="user-list__data__box__photo-img" />
-          </div>
-          <div class="user-list__data-name">
-            Alexis
-          </div>
-          <div class="user-list__data-lastnameP">
-            Narvaez
-          </div>
-          <div class="user-list__data-lastnameM">
-            Tadeo
-          </div>
-          <div class="user-list__data-email">
-            alexis@email.com
-          </div>
-          <div class="user-list__data-rol">
-            Admin
-          </div>
-          <div class="user-list__data-active">
-            <div class="fas fa-toggle-on"></div>
-            <div class="fas fa-toggle-off"></div>
-          </div>
-          <div class="user-list__data-actions">
-            <div class="fas fa-edit"></div>
-            <div class="fas fa-trash"></div>
-          </div>
-        </div>
-        <div class="user-list__data">
-          <div class="fas fa-grip-vertical"></div>
-          <div class="user-list__data__box__photo">
-            <img alt="photo" class="user-list__data__box__photo-img" />
-          </div>
-          <div class="user-list__data-name">
-            Alexis
-          </div>
-          <div class="user-list__data-lastnameP">
-            Narvaez
-          </div>
-          <div class="user-list__data-lastnameM">
-            Tadeo
-          </div>
-          <div class="user-list__data-email">
-            alexis@email.com
-          </div>
-          <div class="user-list__data-rol">
-            Admin
-          </div>
-          <div class="user-list__data-active">
-            <div class="fas fa-toggle-on"></div>
-            <div class="fas fa-toggle-off"></div>
+            <div *ngIf="user.active" class="fas fa-toggle-on"></div>
+            <div *ngIf="!user.active" class="fas fa-toggle-off"></div>
           </div>
           <div class="user-list__data-actions">
             <div class="fas fa-edit"></div>

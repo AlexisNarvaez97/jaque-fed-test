@@ -25,41 +25,41 @@
     }
 
     &-email {
-        width: 18%;
-        font-size: 1.3rem;
+      width: 18%;
+      font-size: 1.3rem;
     }
 
     &-rol {
-        width: 12%;
-        display: flex;
-        align-items: center;
+      width: 12%;
+      display: flex;
+      align-items: center;
     }
 
-    &-drag, &-photo {
-        width: 9.5%;
+    &-drag,
+    &-photo {
+      width: 9.5%;
     }
 
     &-status {
-        width: 5%;
+      width: 5%;
     }
 
     &-actions {
-        width: 10%;
+      width: 10%;
     }
   }
 
-
   .user-list__data {
-    height: auto;
+    height: 100%;
     width: 100%;
     padding-top: 1rem;
-    margin-top: .1rem;
+    margin-top: 0.1rem;
     background-color: white;
     border-bottom: 0.1rem solid var(--border-grey);
     display: flex;
     font-size: 1.4rem;
     justify-content: space-evenly;
-  
+
     &__box__photo {
       width: 10%;
       &-img {
@@ -69,7 +69,7 @@
         margin-top: 1rem;
       }
     }
-  
+
     &-name,
     &-lastnameP,
     &-lastnameM {
@@ -80,7 +80,7 @@
       justify-content: flex-start;
       white-space: normal;
     }
-  
+
     &-email {
       display: flex;
       align-items: center;
@@ -88,8 +88,11 @@
       width: 17%;
       font-size: 1.3rem;
       margin-right: 1rem;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
     }
-  
+
     &-rol {
       width: 12%;
       font-size: 1.3rem;
@@ -113,8 +116,7 @@
       padding-top: 0.35rem;
       padding-left: 2rem;
     }
-}
-
+  }
 }
 
 .fa-toggle-on {
@@ -142,4 +144,9 @@
   align-items: center;
   font-size: 2rem;
   color: var(--background-icon);
+}
+
+
+.box-list-user {
+  margin-bottom: 3rem;
 }

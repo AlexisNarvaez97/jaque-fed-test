@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 
+import { environment } from './../../environments/environment';
+
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -9,14 +12,16 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserService {
 
+  baseUrl = environment.base;
+
   constructor(public http: HttpClient) { }
 
   getUsers() {
-    return this.http.get('assets/users.json');
+    return this.http.get(`${this.baseUrl}users.json`);
   }
 
   getRoles() {
-    return this.http.get('assets/roles.json');
+    return this.http.get(`${this.baseUrl}roles.json`);
   }
 
 

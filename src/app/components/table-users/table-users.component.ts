@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableUsersComponent implements OnInit {
 
-  constructor() { }
+  public search : any = '';
+
+  constructor() { 
+    
+  }
 
   ngOnInit(): void {
   }

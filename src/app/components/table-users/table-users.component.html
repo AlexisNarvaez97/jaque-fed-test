@@ -1,7 +1,7 @@
 <div class="table">
     <div class="table__box-search">
         <i class="fas fa-search"></i>
-        <input type="text" placeholder="Búsqueda" class="table__box-search__input">
+        <input type="text" placeholder="Búsqueda" name="search" [(ngModel)]="search" class="table__box-search__input">
     </div>
     <div class="table__order">
         <select name="select" class="table__order-select">
@@ -25,4 +25,4 @@
       </div>
     </div>
 </div>
-<app-list-users></app-list-users>
+<app-list-users [search]="search"></app-list-users>
