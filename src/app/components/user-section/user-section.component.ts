@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-user-section',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserSectionComponent implements OnInit {
 
+  @Output() modalOpen = new EventEmitter<boolean>();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  openModal() {
+    this.modalOpen.emit(true);
   }
 
 }

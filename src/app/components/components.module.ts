@@ -5,13 +5,15 @@ import { CommonModule } from '@angular/common';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
 import { UserSectionComponent } from './user-section/user-section.component';
+import { ModalComponent } from './modal/modal.component';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
     SidebarComponent,
-    UserSectionComponent
+    UserSectionComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule
@@ -19,7 +21,8 @@ import { UserSectionComponent } from './user-section/user-section.component';
   exports: [
     HeaderComponent,
     SidebarComponent,
-    UserSectionComponent
+    UserSectionComponent,
+    ModalComponent
   ]
 })
 export class ComponentsModule { }
