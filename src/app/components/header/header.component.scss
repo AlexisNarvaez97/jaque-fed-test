@@ -1,0 +1,40 @@
+.header {
+  font-family: "Circular Std Medium";
+  display: flex;
+  height: 6.4rem;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--gray-line-light);
+
+  &__logo {
+    display: flex;
+    padding: 2.4rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    margin-left: 1rem;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  &__info-user {
+    // border: 1px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 4.6rem;
+  }
+
+  &__username {
+    font-size: 1.4rem;
+    color: var(--gray-medium);
+    line-height: 1.8;
+    margin: 0 2rem;
+
+    &:hover {
+      cursor: pointer;
+      color: var(--orange);
+    }
+  }
+}
