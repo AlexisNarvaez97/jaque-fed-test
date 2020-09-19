@@ -1,0 +1,145 @@
+.user-list {
+  height: 6.4rem;
+  width: 100%;
+  background-color: var(--white);
+  margin-top: 0.1rem;
+  display: flex;
+  flex-direction: column;
+
+  &__head {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    font-weight: 700;
+    padding-top: 2.5rem;
+
+    > * {
+      font-size: 1.4rem;
+    }
+
+    &-name,
+    &-lastnameP,
+    &-lastnameM {
+      width: 12%;
+      font-size: 1.3rem;
+    }
+
+    &-email {
+        width: 18%;
+        font-size: 1.3rem;
+    }
+
+    &-rol {
+        width: 12%;
+        display: flex;
+        align-items: center;
+    }
+
+    &-drag, &-photo {
+        width: 9.5%;
+    }
+
+    &-status {
+        width: 5%;
+    }
+
+    &-actions {
+        width: 10%;
+    }
+  }
+
+
+  .user-list__data {
+    height: auto;
+    width: 100%;
+    padding-top: 1rem;
+    margin-top: .1rem;
+    background-color: white;
+    border-bottom: 0.1rem solid var(--border-grey);
+    display: flex;
+    font-size: 1.4rem;
+    justify-content: space-evenly;
+  
+    &__box__photo {
+      width: 10%;
+      &-img {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 15rem;
+        margin-top: 1rem;
+      }
+    }
+  
+    &-name,
+    &-lastnameP,
+    &-lastnameM {
+      width: 12%;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      white-space: normal;
+    }
+  
+    &-email {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 17%;
+      font-size: 1.3rem;
+      margin-right: 1rem;
+    }
+  
+    &-rol {
+      width: 12%;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    &-active {
+      width: 5%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    &-actions {
+      height: auto;
+      width: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 0.35rem;
+      padding-left: 2rem;
+    }
+}
+
+}
+
+.fa-toggle-on {
+  font-size: 2rem;
+  color: var(--blue-toggle);
+}
+
+.fa-toggle-off {
+  font-size: 2rem;
+  color: var(--blue-toggle);
+}
+
+.fa-trash {
+  color: red;
+}
+.fa-edit {
+  color: var(--orange);
+  padding-right: 1rem;
+}
+
+.fa-grip-vertical {
+  display: flex;
+  width: 10%;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: var(--background-icon);
+}

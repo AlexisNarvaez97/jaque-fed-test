@@ -5,6 +5,7 @@
     <app-sidebar></app-sidebar>
     <section class="user-container">
         <app-user-section (modalOpen)="sendModal($event)"></app-user-section>
+        <app-table-users></app-table-users>
     </section>
 </div>
 <app-modal *ngIf="showModal" (closeModal)="modalClosed($event)"></app-modal>

@@ -6,6 +6,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
 import { UserSectionComponent } from './user-section/user-section.component';
 import { ModalComponent } from './modal/modal.component';
+import { TableUsersComponent } from './table-users/table-users.component';
+import { ListUsersComponent } from './list-users/list-users.component';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { ModalComponent } from './modal/modal.component';
     HeaderComponent,
     SidebarComponent,
     UserSectionComponent,
-    ModalComponent
+    ModalComponent,
+    TableUsersComponent,
+    ListUsersComponent
   ],
   imports: [
     CommonModule
@@ -22,7 +26,9 @@ import { ModalComponent } from './modal/modal.component';
     HeaderComponent,
     SidebarComponent,
     UserSectionComponent,
-    ModalComponent
+    ModalComponent,
+    TableUsersComponent,
+    ListUsersComponent
   ]
 })
 export class ComponentsModule { }
