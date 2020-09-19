@@ -1,5 +1,5 @@
 .aside {
-  max-width: 256px;
+  max-width: 25.6rem;
   height: 90vh;
   position: relative;
   overflow: hidden;
@@ -11,7 +11,7 @@
   justify-content: space-between;
 
   &__box {
-    padding: 16px;
+    padding: 1.6rem;
     display: flex;
     cursor: pointer;
     align-items: center;
@@ -21,7 +21,7 @@
 
   &__title {
     margin-left: 0;
-    font-size: 14px;
+    font-size: 1.4rem;
     color: var(--gray-medium);
     margin-left: 2rem;
   }

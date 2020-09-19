@@ -1,4 +1,9 @@
 .container {
     display: flex;
-    border: 1px solid red; /* Debug */
+}
+
+.user-container {
+    width: 100%;
+    background-color: var(--gray-line-light);
+    padding: 4rem;
 }
