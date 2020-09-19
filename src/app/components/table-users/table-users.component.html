@@ -13,6 +13,8 @@
     <div class="table__status">
         <select
         name="status"
+        (change)="statusFilter()"
+        [(ngModel)]="status"
         class="table__status-select"
       >
         <option value="">Todos</option>
@@ -25,4 +27,4 @@
       </div>
     </div>
 </div>
-<app-list-users [search]="search"></app-list-users>
+<app-list-users [search]="search" [filterUsers]="statusUser"></app-list-users>

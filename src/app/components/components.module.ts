@@ -1,3 +1,4 @@
+import { StatusFilterPipe } from './../pipes/status-filter.pipe';
 import { SearchPipe } from './../pipes/search.pipe';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     ModalComponent,
     TableUsersComponent,
     ListUsersComponent,
-    SearchPipe
+    SearchPipe,
+    StatusFilterPipe
   ],
   imports: [
     CommonModule,

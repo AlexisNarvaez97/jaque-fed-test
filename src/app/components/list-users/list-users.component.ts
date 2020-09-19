@@ -10,6 +10,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ListUsersComponent implements OnInit {
 
   @Input() search;
+  @Input() filterUsers;
 
   userData = [];
   rolesData = [];

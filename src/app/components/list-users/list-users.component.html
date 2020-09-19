@@ -1,49 +1,52 @@
 <div class="user-list">
-    <div class="user-list__head">
-      <div class="user-list__head-drag"></div>
-      <div class="user-list__head-photo">Foto</div>
-      <div class="user-list__head-name">Nombre</div>
-      <div class="user-list__head-lastnameP">Apellido Paterno</div>
-      <div class="user-list__head-lastnameM">Apellido Materno</div>
-      <div class="user-list__head-email">Correo</div>
-      <div class="user-list__head-rol">Rol</div>
-      <div class="user-list__head-status">Status</div>
-      <div class="user-list__head-actions"></div>
-    </div>
-    <div class="box-list-user">
-      <div
-      *ngFor="let user of users | search:search"
-      >
-        <div class="user-list__data">
-          <div class="fas fa-grip-vertical"></div>
-          <div class="user-list__data__box__photo">
-            <img src="{{ user.picture }}" alt="photo" class="user-list__data__box__photo-img" />
-          </div>
-          <div class="user-list__data-name">
-            {{ user.name }}
-          </div>
-          <div class="user-list__data-lastnameP">
-            {{ user.mothersLastName }}
-          </div>
-          <div class="user-list__data-lastnameM">
-            {{ user.fathersLastName }}
-          </div>
-          <div class="user-list__data-email">
-            {{ user.email }}
-          </div>
-          <div class="user-list__data-rol">
-            {{ rolWork(user.roleId) }}
-          </div>
-          <div class="user-list__data-active">
-            <div *ngIf="user.active" class="fas fa-toggle-on"></div>
-            <div *ngIf="!user.active" class="fas fa-toggle-off"></div>
-          </div>
-          <div class="user-list__data-actions">
-            <div class="fas fa-edit"></div>
-            <div class="fas fa-trash"></div>
-          </div>
+  <div class="user-list__head">
+    <div class="user-list__head-drag"></div>
+    <div class="user-list__head-photo">Foto</div>
+    <div class="user-list__head-name">Nombre</div>
+    <div class="user-list__head-lastnameP">Apellido Paterno</div>
+    <div class="user-list__head-lastnameM">Apellido Materno</div>
+    <div class="user-list__head-email">Correo</div>
+    <div class="user-list__head-rol">Rol</div>
+    <div class="user-list__head-status">Status</div>
+    <div class="user-list__head-actions"></div>
+  </div>
+  <div class="box-list-user">
+    <div
+      *ngFor="let user of users | search: search | statusFilter: filterUsers"
+    >
+      <div class="user-list__data">
+        <div class="fas fa-grip-vertical"></div>
+        <div class="user-list__data__box__photo">
+          <img
+            src="{{ user.picture }}"
+            alt="photo"
+            class="user-list__data__box__photo-img"
+          />
+        </div>
+        <div class="user-list__data-name">
+          {{ user.name }}
+        </div>
+        <div class="user-list__data-lastnameP">
+          {{ user.mothersLastName }}
+        </div>
+        <div class="user-list__data-lastnameM">
+          {{ user.fathersLastName }}
+        </div>
+        <div class="user-list__data-email">
+          {{ user.email }}
+        </div>
+        <div class="user-list__data-rol">
+          {{ rolWork(user.roleId) }}
+        </div>
+        <div class="user-list__data-active">
+          <div *ngIf="user.active" class="fas fa-toggle-on"></div>
+          <div *ngIf="!user.active" class="fas fa-toggle-off"></div>
+        </div>
+        <div class="user-list__data-actions">
+          <div class="fas fa-edit"></div>
+          <div class="fas fa-trash"></div>
         </div>
       </div>
     </div>
   </div>
-  
+</div>
