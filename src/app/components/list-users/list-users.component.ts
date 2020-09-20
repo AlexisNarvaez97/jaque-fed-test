@@ -31,7 +31,6 @@ export class ListUsersComponent implements OnInit {
   getAllUsers() {
     this.userS.getUsers().subscribe( (resp: any) => {
       this.users = resp.users;
-      console.log(resp)
     })
   }
 

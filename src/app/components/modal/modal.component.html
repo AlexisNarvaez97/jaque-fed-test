@@ -12,13 +12,14 @@
         <button class="user__photo-box__button">Subir foto</button>
       </div>
     </div>
-    <div class="box-modal__form">
+    <form [formGroup]="registerUser" (ngSubmit)="sendData(registerUser)" class="box-modal__form">
       <div class="box-modal__form__names-info">
-        <input type="text" placeholder="Nombre" class="input-custom" />
+        <input type="text" placeholder="Nombre" class="input-custom" formControlName="name" />
         <input
           type="text"
           placeholder="Apellido Paterno"
           class="input-custom"
+          formControlName="lastnameP"
         />
       </div>
       <div class="box-modal__form__contact-info">
@@ -26,19 +27,21 @@
           type="text"
           placeholder="Apellido materno"
           class="input-custom"
+          formControlName="lastnameM"
         />
         <input
           type="text"
           placeholder="Correo electrónico"
           class="input-custom"
+          formControlName="email"
         />
       </div>
       <div class="box-modal__form__rol-info">
-        <select name="rol" class="input-custom">
+        <select name="rol" class="input-custom" formControlName="rol">
           <option value="" disabled selected>Rol</option>
-          <option value="Dueño">Dueño</option>
-          <option value="Administrador">Administrador</option>
-          <option value="Staff">Staff</option>
+          <option value='1'>Dueño</option>
+          <option value="2">Administrador</option>
+          <option value="3">Staff</option>
         </select>
         <div class="toggle-custom">
             <label class="toggle-custom-inactive">Inactivo</label>
@@ -49,12 +52,12 @@
               <label class="toggle-custom-active">Activo</label>
         </div>
       </div>
-    </div>
-    <div class="box-modal__buttons-actions">
-      <button class="box-modal__buttons-actions-close" (click)="modalClose()">
-        Cancelar
-      </button>
-      <button class="box-modal__buttons-actions-save">Guardar Usuario</button>
-    </div>
+      <div class="box-modal__buttons-actions">
+        <button class="box-modal__buttons-actions-close" (click)="modalClose()">
+          Cancelar
+        </button>
+        <button type="submit" class="box-modal__buttons-actions-save">Guardar Usuario</button>
+      </div>
+    </form>
   </div>
 </div>

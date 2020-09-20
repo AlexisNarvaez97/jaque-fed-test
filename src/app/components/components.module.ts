@@ -12,7 +12,7 @@ import { UserSectionComponent } from './user-section/user-section.component';
 import { ModalComponent } from './modal/modal.component';
 import { TableUsersComponent } from './table-users/table-users.component';
 import { ListUsersComponent } from './list-users/list-users.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalEditComponent } from './modal-edit/modal-edit.component';
 
 @NgModule({
@@ -30,7 +30,8 @@ import { ModalEditComponent } from './modal-edit/modal-edit.component';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     HeaderComponent,

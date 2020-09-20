@@ -16,6 +16,10 @@ export class UserService {
 
   constructor(public http: HttpClient) { }
 
+  readLocalStorage(): string {
+    return localStorage.getItem('users');
+  }
+
   getUsers() {
     return this.http.get(`${this.baseUrl}users.json`);
   }
